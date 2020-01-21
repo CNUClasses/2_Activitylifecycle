@@ -32,7 +32,7 @@ public class keithActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy: ");
+        Log.d(TAG, "onDestroy: "); //just
     }
 
     /**
@@ -58,7 +58,7 @@ public class keithActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         Log.d(TAG, "onRestoreInstanceState: ");
-    }
+     }
 
     /**
      * Dispatch onPause() to fragments.

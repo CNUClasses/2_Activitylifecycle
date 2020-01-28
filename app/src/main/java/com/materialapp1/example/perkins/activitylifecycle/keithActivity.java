@@ -1,17 +1,23 @@
 package com.materialapp1.example.perkins.activitylifecycle;
 
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.materialapp1.example.perkins.activitylifecycle.R;
 
 public class keithActivity extends AppCompatActivity {
 
-    private static final String TAG = "keithActivity";
+    private static final String TAG = "keithActivity" ;
+    private Button b1;
+
     private TextView myTextView1;
 
     @Override
@@ -20,7 +26,15 @@ public class keithActivity extends AppCompatActivity {
         setContentView(R.layout.activity_keith);
 
         myTextView1 = (TextView) findViewById(R.id.textView1);
+        b1=(Button)findViewById(R.id.button);
+
         Log.d(TAG, "onCreate: info");
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Log.d(TAG, "onConfigurationChanged: ");
     }
 
     @Override
@@ -133,5 +147,10 @@ public class keithActivity extends AppCompatActivity {
 
     public void do_clickButton1(View view) {
         myTextView1.setText(R.string.diff_text);
+    }
+
+    public void doBut1(View view) {
+        b1.setText("new info");
+
     }
 }

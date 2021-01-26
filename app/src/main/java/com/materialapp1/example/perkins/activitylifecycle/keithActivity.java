@@ -1,10 +1,12 @@
 package com.materialapp1.example.perkins.activitylifecycle;
 
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +22,10 @@ public class keithActivity extends AppCompatActivity {
 
     private TextView myTextView1;
 
+    public keithActivity() {
+        super();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +36,7 @@ public class keithActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: info");
     }
+
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
